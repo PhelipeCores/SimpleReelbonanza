@@ -3,6 +3,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    
     const icon_width = 79;
     const icon_height = 79;
     const sum_icons = 9;
@@ -12,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const spinButton = document.querySelector('.spinButton button');
 
-    // Attach a click event listener to the button
+
     spinButton.addEventListener('click', () => {
         spinButton.disabled = true;
         spinningReels();
         setTimeout(() => {
             spinButton.disabled = false;
-        }, 3000); // Adjust the delay as needed
+        }, 3000); 
     });
 
-   
+   // Reels animation
     function spinningReels() {
         const reelsList = document.querySelectorAll('.slots > .reel');
 
