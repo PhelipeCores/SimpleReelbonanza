@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const indexes = [0, 0, 0];
     const iconMap = ['Banana', 'Seven', 'Cherry', 'Plum', 'Orange', 'Bell', 'Bar', 'Lemon', 'Bar', 'Lemon', 'Melon'];
 
-    // Select the button element within the "spinButton" div by its class
     const spinButton = document.querySelector('.spinButton button');
 
     // Attach a click event listener to the button
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000); // Adjust the delay as needed
     });
 
-    // Rest of your code, including the spinningReels function
+   
     function spinningReels() {
         const reelsList = document.querySelectorAll('.slots > .reel');
 
@@ -36,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (indexes[0] === indexes[1] || (indexes[0] === indexes[1] && indexes[1] === indexes[2])) {
                     console.log('WIN WIN WIN');
                 }
-                spinButton.disabled = false; // Re-enable the button after spinning
+                spinButton.disabled = false; 
             });
     }
 
-    // Animates the html reel element (unchanged)
+
     const roll = (reel, offset = 0) => {
         const delta = (offset + 2) * sum_icons + Math.round(Math.random() * sum_icons);
         const style = getComputedStyle(reel);
@@ -60,6 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Initial call to start spinning
+    
     spinningReels();
 });
